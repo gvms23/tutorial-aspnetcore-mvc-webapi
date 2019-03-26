@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To-do CRUD</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--<style>
+        input[type='submit'], button, [aria-label] {
+            cursor: pointer;
+        }
+
+        #spoiler {
+            display: none;
+        }
+
+        table {
+            font-family: Arial, sans-serif;
+            border: 1px solid;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #0066CC;
+            color: white;
+        }
+
+        td {
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>-->
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+            <h2>To-do CRUD</h2>
+            <span class="badge badge-secondary badge-pill" id="counter"></span>
+            <p class="lead">Example API in ASP .NET Core with Bootstrap and JQuery</p>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Add new To-Do Item</h4>
+                <div class="row">
+                    <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="add-name">Add Name</label>
+                                <input type="text" id="add-name" placeholder="To-Do Name" class="form-control" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName">Add Details</label>
+                                <input type="text" id="add-details" placeholder="To-Do Details" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12 order-md-1">
+                <h4 class="mb-3">Edit To-Do Item</h4>
+                <div class="row" id="spoiler">
+                    <form class="my-form">
+                        <input type="hidden" id="edit-id">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="add-name">Is Complete</label>
+                                <input type="checkbox" id="edit-isComplete" placeholder="To-Do Is Complete" class="form-control">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="add-name">Edit Name</label>
+                                <input type="text" id="edit-name" placeholder="To-Do Name" class="form-control" required>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="lastName">Edit Details</label>
+                                <input type="text" id="edit-details" placeholder="To-Do Details" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Save">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    <tr>
+                        <th>Is Complete</th>
+                        <th>Name</th>
+                        <th>Details</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tbody id="todos"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <!--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="site.js"></script>
+</body>
+</html>
